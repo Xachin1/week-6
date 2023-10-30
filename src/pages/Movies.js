@@ -23,9 +23,9 @@ const Movies = () => {
     if (filter) {
       const filteredMovies = [...movies].sort((a, b) => {
         if (filter === 'OLD_TO_NEW') {
-          return a.Year - b.Year;
+          return parseInt(a.Year) - parseInt(b.Year);
         } else if (filter === 'NEW_TO_OLD') {
-          return b.Year - a.Year;
+          return parseInt(b.Year) - parseInt(a.Year);
         }
         return 0;
       });
