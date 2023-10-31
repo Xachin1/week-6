@@ -12,7 +12,7 @@ const Movies = () => {
   async function renderMovies() {
     setLoading(true);
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?&apikey=bdc05ce&s=${query}`
+      `https://www.omdbapi.com/?&apikey=bdc05ce&s=${query}`
     );
     const res = data.Search;
     setMovies(res.slice(0, 8));
